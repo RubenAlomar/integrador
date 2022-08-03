@@ -31,14 +31,7 @@ header{
     display: flex;
     flex-direction: row;
 }
-@media (max-width: 1000px) {
-    .cont-header {
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-    }
 
-}
 .yo{
     width: 50%;
     display: flex;
@@ -84,6 +77,46 @@ nav{
   font-size: x-large; 
   text-shadow: 5px 5px 5px black;
 }
+.cont-nav i{
+    font-size: 40px;
+    color: whitesmoke;
+    cursor: pointer;
+    display: none;
+}
+#toggle-menu {
+    display: none;
+}
+@media (max-width: 990px) {
+    .header{
+        padding: opx 50px 0px 10px;
+    }
+    .cont-nav i{
+        display: flex;
+    }
+    .lista{
+        position: absolute;
+        background-color:  rgb(70, 66, 66);
+        flex-direction: column;
+        top: 100px;
+        align-items: center;
+        right: 0;
+        width: 30%;
+        height: calc(100vh - 180px);
+        z-index: 999;
+        display: none;
+    }
+
+#toggle-menu:checked + .lista {
+    display: flex;
+    }
+.cont-nav label{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 50px;
+}
+}
+
 .titulo{
     display: flex;
     color: gold;
@@ -151,8 +184,9 @@ nav{
     text-shadow: 5px 5px 5px black;
     margin-top: 50px;
     margin-bottom: 5px;
+}
 
-}.cards-contenedor{
+.cards-contenedor{
     display: flex;
     align-content: space-around;
     justify-content: center;
@@ -192,6 +226,11 @@ nav{
     text-shadow: 5px 5px 5px black; 
     margin: 5px;  
 }
+@media (max-width: 990px) {
+    .card-contenido h3{
+        font-size: 1em;
+    }
+}
 .card-contenido h3:hover{
     color: orangered;
     text-shadow: -5px 5px 5px black;
@@ -213,6 +252,14 @@ nav{
     align-items: flex-start;
     justify-content: center;
     margin-top: 0px;
+}
+@media (max-width: 990px) {
+    .contenedor-footer{
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+    }
+    
 }
 .footer-info h2{
     color: gold;
